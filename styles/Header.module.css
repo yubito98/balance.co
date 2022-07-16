@@ -1,0 +1,27 @@
+.header nav{
+    background-color: white;
+    box-shadow: 0 24px 64px rgb(38 33 74 / 10%);
+    padding: 10px 20px;
+}
+
+.header h3 a{
+    color: #292d34;
+    text-decoration: none;
+}
+
+.header button{
+    margin-left: 15px;
+}
+
+.navbarContainer{
+    margin-left: auto !important;
+    margin-right: 20px;
+}
+
+.navbarContainer li{
+    margin-right: 15px;
+}
+
+.navbarContainer li a{
+    color: #292d34;
+}
