@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/TertiaryButton.module.css"
+import styles from "./tertiaryButton.module.css"
 
 const TertiaryButton = ({text, href}) =>{
     return(

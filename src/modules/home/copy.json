@@ -1,0 +1,9 @@
+{
+    "title":"Mejora tu vida!",
+    "description":"Balance.co es una herramienta que te ayudara a equilibrar los diferentes aspectos de tu vida para mejorar tu estabilidad emocional.",
+    "image":"/assets/home-image.png",
+    "tertiaryButton":{
+        "url":"http://localhost:3005/registro",
+        "text":"Comienza YA"
+    }
+}

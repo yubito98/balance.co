@@ -1,7 +1,7 @@
 import React from "react";
-import PrimaryButton from "./PrimaryButton";
-import SecondaryButton from "./SecondaryButton";
-import styles from "../styles/Header.module.css"
+import PrimaryButton from "../primaryButton";
+import SecondaryButton from "../secondaryButton";
+import styles from "./header.module.css"
 const Header = () =>{
     return(
         <header className={styles.header}>

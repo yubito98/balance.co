@@ -1,0 +1,17 @@
+.custom-container{
+    max-width: 1366px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.container-centered{
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
