@@ -1,23 +1,30 @@
 import React from "react";
-import PrimaryButton from "../primaryButton";
-import SecondaryButton from "../secondaryButton";
 import styles from "./header.module.css"
+import primaryButtonStyles from "../primaryButton/primaryButton.module.css"
+import secondaryButtonStyles from "../secondaryButton/secondaryButton.module.css"
+import Link from "next/link";
+import {joinClassName} from "../../utils/joinClassName"
+
 const Header = () =>{
     return(
         <header className={styles.header}>
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container-fluid">
-                    <h3><a className="" href="#">Balance.co</a></h3>
+                    <Link href="/" >
+                        <h3><a>Balance.co</a></h3>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className={styles.navbarContainer + " navbar-nav mb-2 mb-lg-0"}>
                         <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a className="nav-link active" aria-current="page" href="/">Inicio</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#">Sobre Nosotros</a>
+                            <Link href="/login" >
+                                <a className="nav-link">Sobre Nosotros</a>
+                            </Link>
                         </li>
                         <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,12 +37,12 @@ const Header = () =>{
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
-                        <PrimaryButton
-                        text="Iniciar Sesión"
-                        />
-                        <SecondaryButton
-                        text="Registrarse"
-                        />
+                        <Link href="/login" >
+                            <a className={joinClassName([primaryButtonStyles.button, "btn btn-primary"]) }>Inicar Sesión</a>
+                        </Link>
+                        <Link href="/sign-up" >
+                            <a className={joinClassName([secondaryButtonStyles.button, "btn btn-primary ms-3"]) }>Registrarse</a>
+                        </Link>
                     </form>
                     </div>
                 </div>

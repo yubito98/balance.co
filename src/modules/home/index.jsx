@@ -1,7 +1,8 @@
 import Header from "../../components/header";
 import styles from "./home.module.css"
 import copy from "./copy.json"
-import TertiaryButton from "../../components/tertiaryButton"
+import tertiaryButtonStyles from "../../components/tertiaryButton/tertiaryButton.module.css"
+import Link from "next/link";
 import { joinClassName } from '../../utils/joinClassName'
 
 const Home = () =>{
@@ -13,10 +14,9 @@ const Home = () =>{
                     <div className="col-6" >
                         <h1>{copy.title}</h1>
                         <p>{copy.description}</p>
-                        <TertiaryButton
-                        text={copy.tertiaryButton.text}
-                        href={copy.tertiaryButton.url}
-                        />
+                        <Link href={copy.link.url}>
+                            <a className={joinClassName([tertiaryButtonStyles.button, "btn btn-primary"])} >{copy.link.text}</a>
+                        </Link>
                     </div>
                     <div className={joinClassName([styles.heroContainerImg, "col-6"])}>
                         <img src={copy.image} alt="" />

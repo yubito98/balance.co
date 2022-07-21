@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./primaryButton.module.css"
 
 const PrimaryButton = ({text, type}) =>{
@@ -8,6 +8,7 @@ const PrimaryButton = ({text, type}) =>{
         type={type}
         >
             {text}
+            
         </button>
     )
 }
