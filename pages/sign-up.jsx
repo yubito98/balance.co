@@ -1,12 +1,11 @@
-import Header from "../src/components/header"
+import SignUpModule from "../src/modules/sign-up";
 
 
 
 const SignUp = () =>{
     return(
         <>
-            <Header/>
-        
+            <SignUpModule/>
         </>
     )
 }

@@ -1,15 +1,16 @@
-import React from "react";
-import styles from "../styles/Input.module.css"
+import styles from "./input.module.css"
+import { joinClassName } from "../../utils/joinClassName"
 
-const Input = ({type, placeholder, value, onChange, id}) =>{
+const Input = ({type, placeholder, id, onChange, value, key}) =>{
     return(
         <input
-            className={styles.input + " form-control mb-4" }
-            type={type}
-            placeholder={placeholder}
-            value={value}
-            onChange={onChange}
+            className={joinClassName([styles.input, "form-control mb-4"])}
+            key={key}
             id={id}
+            type={type}
+            value={value}
+            placeholder={placeholder}
+            onChange={onChange}
          />
     )
 }

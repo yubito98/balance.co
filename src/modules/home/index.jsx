@@ -1,6 +1,5 @@
 import Header from "../../components/header";
 import styles from "./home.module.css"
-import Image from 'next/image'
 import copy from "./copy.json"
 import TertiaryButton from "../../components/tertiaryButton"
 import { joinClassName } from '../../utils/joinClassName'
@@ -22,7 +21,6 @@ const Home = () =>{
                     <div className={joinClassName([styles.heroContainerImg, "col-6"])}>
                         <img src={copy.image} alt="" />
                     </div>
-
                 </div>
             </div>
         
