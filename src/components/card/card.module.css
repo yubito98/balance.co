@@ -1,0 +1,31 @@
+.card{
+    background-color: white;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    min-height: 280px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 -1px 16px 6px rgb(62 62 62 / 30%);
+    transition: 0.5s;
+    border-radius: 9px;
+}
+
+
+.card h3{
+    margin-top: 20px;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.card:hover{
+    background-color: #f7d547;
+    box-shadow: 0 10px 25px #f7d54780;
+    color:white;
+}

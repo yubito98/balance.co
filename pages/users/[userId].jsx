@@ -1,35 +1,47 @@
-import React from "react";
-import Header from "../../components/Header"
+import { useEffect } from "react";
 import { useRouter } from 'next/router';
 import { useState } from "react";
-import { useEffect } from "react";
-import { getUser } from "../../functions/getUser";
+import { getCustomer } from "../../src/utils/getCustomer";
+import { getCategories } from "../../src/utils/getCategories";
+import Header from "../../src/components/header"
+import Card from "../../src/components/card";
 
 const UserId = () =>{
 
     const [user, setUser] = useState(null);
+    const {query: { userId } } = useRouter();
 
 
-    const {query: 
-        { userId },
-    } = useRouter();
+    const [ category, setCategories] = useState(null);
 
     useEffect(() =>{
-        getUser(userId, setUser);
+        getCustomer(userId, setUser);
+        getCategories(setCategories);
     })
 
 
     return(
         <>
             <Header/>
-            {user != null ?(
+            <div className="custom-container">
+                {user != null ?(
+                    <h1>Hola {user.name}. Es hora de que equilibres tu vida</h1>
 
-                <h1>Hola, {user.role}. Es hora de que equilibres tu vida</h1>
-
+                ): ("No hay usuario")
+                }
+            </div>
+            <div className="custom-container d-flex justify-content-between">
+                {category != null?(
+                    category.map(item => (
+                        <Card 
+                        src={item.image}
+                        title={item.name}
+                        />
+                        
+                    ))
+                ):(<p>No hay categorias</p>)}
                 
-            ): ("No hay usuario")
-            }
-            
+            </div>
         </>
     )
 }

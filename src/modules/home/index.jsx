@@ -1,7 +1,6 @@
 import Header from "../../components/header";
 import styles from "./home.module.css"
 import copy from "./copy.json"
-import tertiaryButtonStyles from "../../components/tertiaryButton/tertiaryButton.module.css"
 import Link from "next/link";
 import { joinClassName } from '../../utils/joinClassName'
 
@@ -15,7 +14,7 @@ const Home = () =>{
                         <h1>{copy.title}</h1>
                         <p>{copy.description}</p>
                         <Link href={copy.link.url}>
-                            <a className={joinClassName([tertiaryButtonStyles.button, "btn btn-primary"])} >{copy.link.text}</a>
+                            <a className="btn btn-primary button isSecondary">{copy.link.text}</a>
                         </Link>
                     </div>
                     <div className={joinClassName([styles.heroContainerImg, "col-6"])}>

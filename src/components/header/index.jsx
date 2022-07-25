@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./header.module.css"
-import primaryButtonStyles from "../primaryButton/primaryButton.module.css"
-import secondaryButtonStyles from "../secondaryButton/secondaryButton.module.css"
 import Link from "next/link";
 import {joinClassName} from "../../utils/joinClassName"
 
@@ -38,10 +36,10 @@ const Header = () =>{
                     </ul>
                     <form className="d-flex" role="search">
                         <Link href="/login" >
-                            <a className={joinClassName([primaryButtonStyles.button, "btn btn-primary"]) }>Inicar Sesión</a>
+                            <a className="btn btn-primary button isPrimary">Inicar Sesión</a>
                         </Link>
                         <Link href="/sign-up" >
-                            <a className={joinClassName([secondaryButtonStyles.button, "btn btn-primary ms-3"]) }>Registrarse</a>
+                            <a className="btn btn-primary button isSecondary ms-3">Registrarse</a>
                         </Link>
                     </form>
                     </div>
